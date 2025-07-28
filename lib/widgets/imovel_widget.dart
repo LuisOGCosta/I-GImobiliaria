@@ -9,21 +9,24 @@ class HomePage extends StatelessWidget {
       "preco": 150000.00,
       "descricao": "Espaçoso e bem localizado, com varanda gourmet.",
       "imagem": 'img/casade15milha.png',
-      "localizacao": "Nova Lima - MG",
+      "local": "Nova Lima - MG",
       "financiamento": true,
     },
     {
       "nome": "Casa grande com quintal e 4 quartos e \n uma suites",
       "preco": 5000000.00,
-      "descricao": "Alto padrão, área gourmet e piscina aquecida.",
+      "descricao": "\n •Casa contemporânea à venda com fachada imponente. \n •Design minimalista e acabamento sofisticado. Conta com linhas retas, amplas esquadrias de vidro \n •Jardim com paisagismo tropical e escada de entrada elegante. \n •Possui garagem coberta. \n •Ambientes integrados e fachada com detalhes em madeira natural. \n •Localizada em condomínio de alto padrão, em uma região segura e tranquila, ideal para quem busca modernidade, conforto e exclusividade. \n Agende uma visita!",
       "imagem": 'img/casade5milha.jpg',
-      "localizacao": "Nova Lima - MG",
+      "local": "Nova Lima - MG",
       "financiamento": true,
     },
     {
       "nome": "Casa com quintal e 3 quartos",
       "preco": 2000000.00,
-      "descricao": "Localizada no vale do mutuca no condominio vila castela",
+
+      "descricao": "\n•Casa moderna à venda, estilo e conforto em um só lugar.\n •Design contemporâneo com acabamento em madeira e  concreto.\n •Garagem coberta para até 3 carros. \n •Varanda espaçosa no andar superior. \n Jardim frontal com paisagismo e espaços amplos e bem iluminados. \n •Localizada em um bairro tranquilo e valorizado, próxima a comércios, escolas e vias de acesso. Perfeita para morar com conforto e estilo. \n Agende uma visita!",
+
+      
       "imagem": 'img/casade2milha.jpg',
       "local": "Nova Lima - MG",
       "financiamento": false,
@@ -97,8 +100,9 @@ class DetalheCasaPage extends StatelessWidget {
             Text('Localização: ${casa['local']}',
                 style: const TextStyle(fontSize: 18)),
             Text('Preço: R\$ ${casa['preco'].toStringAsFixed(2)}',
-                style:
-                    const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                style: const TextStyle(fontSize: 18, fontWeight: FontWeight.bold)),
+                Text('Descrição: ${casa['descricao']}',
+                style: const TextStyle(fontSize: 18)),
             const SizedBox(height: 30),
             ElevatedButton(
               onPressed: () {},
