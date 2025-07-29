@@ -1,3 +1,4 @@
+import 'package:atividade3/widgets/financiamento_widget.dart';
 import 'package:flutter/material.dart';
 
 class HomePage extends StatelessWidget {
@@ -7,6 +8,7 @@ class HomePage extends StatelessWidget {
     {
       "nome": "Casa com Piscina 5 suites e 3 closet",
       "preco": 150000.00,
+      "descricaoBreve" : "Abaaaa",
       "descricao": "Espaçoso e bem localizado, com varanda gourmet.",
       "imagem": 'img/casade15milha.png',
       "local": "Nova Lima - MG",
@@ -15,6 +17,7 @@ class HomePage extends StatelessWidget {
     {
       "nome": "Casa grande com quintal e 4 quartos e \n uma suites",
       "preco": 5000000.00,
+      "descricaoBreve": "Abuuu",
       "descricao": "\n •Casa contemporânea à venda com fachada imponente. \n •Design minimalista e acabamento sofisticado. Conta com linhas retas, amplas esquadrias de vidro \n •Jardim com paisagismo tropical e escada de entrada elegante. \n •Possui garagem coberta. \n •Ambientes integrados e fachada com detalhes em madeira natural. \n •Localizada em condomínio de alto padrão, em uma região segura e tranquila, ideal para quem busca modernidade, conforto e exclusividade. \n Agende uma visita!",
       "imagem": 'img/casade5milha.jpg',
       "local": "Nova Lima - MG",
@@ -23,7 +26,7 @@ class HomePage extends StatelessWidget {
     {
       "nome": "Casa com quintal e 3 quartos",
       "preco": 2000000.00,
-
+      "descricaoBreve" : "Abeee",
       "descricao": "\n•Casa moderna à venda, estilo e conforto em um só lugar.\n •Design contemporâneo com acabamento em madeira e  concreto.\n •Garagem coberta para até 3 carros. \n •Varanda espaçosa no andar superior. \n Jardim frontal com paisagismo e espaços amplos e bem iluminados. \n •Localizada em um bairro tranquilo e valorizado, próxima a comércios, escolas e vias de acesso. Perfeita para morar com conforto e estilo. \n Agende uma visita!",
 
       
@@ -59,7 +62,7 @@ class HomePage extends StatelessWidget {
               subtitle: Text(
                 'Local: ${casa['local']}\n'
                 'Preço: R\$ ${casa['preco'].toStringAsFixed(2)}\n'
-                'Descrição: ${casa['descricao']}',
+                'Descrição: ${casa['descricaoBreve']}',
               ),
               onTap: () {
                 Navigator.push(
@@ -86,7 +89,8 @@ class DetalheCasaPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(title: Text(casa['nome'])),
-      body: Padding(
+      body:SingleChildScrollView(
+        child: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
           children: [
@@ -111,13 +115,21 @@ class DetalheCasaPage extends StatelessWidget {
             ),
             const SizedBox(height: 10),
             ElevatedButton(
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (_) => FinanciamentoWidget(casa: casa),
+                  ),
+                );
+              },
               style: ElevatedButton.styleFrom(backgroundColor: Colors.blueGrey),
               child: const Text('Financiar'),
             )
           ],
         ),
       ),
+      ) 
     );
   }
 }
