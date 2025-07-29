@@ -6,7 +6,7 @@ class HomePage extends StatelessWidget {
 
   final List<Map<String, dynamic>> casas = const [
     {
-      "nome": "Casa com Piscina 5 suites e 3 closet",
+      "nome": "Casa com Piscina, 5 suites e 3 closet",
       "preco": 150000.00,
       "descricaoBreve" : "Espaçoso e bem localizado, com varanda gourmet.",
       "descricao": "Espaçoso e bem localizado, com varanda gourmet.",
@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
       "financiamento": true,
     },
     {
-      "nome": "Casa grande com quintal e 4 quartos e \n uma suites",
+      "nome": "Casa grande com quintal, 4 quartos e \n uma suites",
       "preco": 5000000.00,
       "descricaoBreve": "Alto padrão, área gourmet e piscina aquecida.",
       "descricao": "\n •Casa contemporânea à venda com fachada imponente. \n •Design minimalista e acabamento sofisticado. Conta com linhas retas, amplas esquadrias de vidro \n •Jardim com paisagismo tropical e escada de entrada elegante. \n •Possui garagem coberta. \n •Ambientes integrados e fachada com detalhes em madeira natural. \n •Localizada em condomínio de alto padrão, em uma região segura e tranquila, ideal para quem busca modernidade, conforto e exclusividade. \n Agende uma visita!",
@@ -37,7 +37,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: const Text('Imóveis em Nova Lima')),
+      appBar: AppBar(title: const Text('Imóveis em Nova Lima - Minas Gerais')),
       body: ListView.builder(
         itemCount: casas.length,
         itemBuilder: (context, index) {
