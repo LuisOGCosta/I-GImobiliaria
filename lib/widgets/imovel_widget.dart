@@ -106,12 +106,23 @@ class DetalheCasaPage extends StatelessWidget {
                 Text('Descrição: ${casa['descricao']}',
                 style: const TextStyle(fontSize: 18)),
             const SizedBox(height: 30),
-            ElevatedButton(
-              onPressed: () {},
-              style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
-              child: const Text('Comprar'),
-            ),
-            const SizedBox(height: 10),
+
+            //Botão de comprar
+           ElevatedButton(
+  onPressed: () {
+    ScaffoldMessenger.of(context).showSnackBar(
+      const SnackBar(
+        content: Text('Essa opção não está disponivel!'),
+        backgroundColor: Color.fromARGB(255, 255, 0, 0),
+        duration: Duration(seconds: 2),
+      ),
+    );
+  },
+  style: ElevatedButton.styleFrom(backgroundColor: Colors.green),
+  child: const Text('Comprar'),
+),
+const SizedBox(height: 10),
+            //Botão de Financiamento 
             ElevatedButton(
               onPressed: () {
                 Navigator.push(
