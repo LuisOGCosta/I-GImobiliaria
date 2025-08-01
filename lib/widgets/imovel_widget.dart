@@ -9,7 +9,7 @@ class HomePage extends StatelessWidget {
       "nome": "Casa com Piscina, 5 suites e 3 closet",
       "preco": 150000.00,
       "descricaoBreve" : "Espaçoso e bem localizado, com varanda gourmet.",
-      "descricao": "Espaçoso e bem localizado, com varanda gourmet.",
+      "descricao": "\n •Casa contemporânea à venda com arquitetura sofisticada e fachada moderna.\n •Ambientes amplos, envidraçados e integrados à área externa, com destaque para o uso de esquadrias de vidro do piso ao teto.\n •Piscina elegante com deck em cerâmica e paisagismo tropical ao redor, proporcionando sensação de lazer e tranquilidade.\n •Conta com palmeiras e vegetação ornamental que valorizam o jardim frontal e lateral da casa.\n •Garagem coberta e acabamento externo em tons neutros com detalhes em madeira e concreto aparente.\n •Localizada em condomínio fechado de alto padrão, oferecendo segurança, privacidade e conforto para toda a família.\n Agende uma visita!",
       "imagem": 'img/casade15milha.png',
       "local": "Nova Lima - MG",
       "financiamento": true,
