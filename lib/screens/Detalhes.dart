@@ -39,7 +39,7 @@ class Detalhes extends StatelessWidget {
             ),
             const SizedBox(height: 8),
             Text(
-              "R\$ ${preco.toStringAsFixed(2)}",
+              "R\$ ${preco}",
               style: const TextStyle(fontSize: 22, color: Colors.green),
             ),
             const SizedBox(height: 16),

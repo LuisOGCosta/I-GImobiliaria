@@ -1,13 +1,14 @@
 import 'package:atividade3/widgets/financiamento_widget.dart';
 import 'package:flutter/material.dart';
+//import 'package:intl/intl.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
-
+  
   final List<Map<String, dynamic>> casas = const [
     {
       "nome": "Casa com Piscina, 5 suites e 3 closet",
-      "preco": 150000.00,
+      "preco": 150000,
       "descricaoBreve" : "Espaçoso e bem localizado, com varanda gourmet.",
       "descricao": "\n •Casa contemporânea à venda com arquitetura sofisticada e fachada moderna.\n •Ambientes amplos, envidraçados e integrados à área externa, com destaque para o uso de esquadrias de vidro do piso ao teto.\n •Piscina elegante com deck em cerâmica e paisagismo tropical ao redor, proporcionando sensação de lazer e tranquilidade.\n •Conta com palmeiras e vegetação ornamental que valorizam o jardim frontal e lateral da casa.\n •Garagem coberta e acabamento externo em tons neutros com detalhes em madeira e concreto aparente.\n •Localizada em condomínio fechado de alto padrão, oferecendo segurança, privacidade e conforto para toda a família.\n Agende uma visita!",
       "imagem": 'img/casade15milha.png',
@@ -16,7 +17,7 @@ class HomePage extends StatelessWidget {
     },
     {
       "nome": "Casa grande com quintal, 4 quartos e \n uma suites",
-      "preco": 5000000.00,
+      "preco": 5000000,
       "descricaoBreve": "Alto padrão, área gourmet e piscina aquecida.",
       "descricao": "\n •Casa contemporânea à venda com fachada imponente. \n •Design minimalista e acabamento sofisticado. Conta com linhas retas, amplas esquadrias de vidro \n •Jardim com paisagismo tropical e escada de entrada elegante. \n •Possui garagem coberta. \n •Ambientes integrados e fachada com detalhes em madeira natural. \n •Localizada em condomínio de alto padrão, em uma região segura e tranquila, ideal para quem busca modernidade, conforto e exclusividade. \n Agende uma visita!",
       "imagem": 'img/casade5milha.jpg',
@@ -25,7 +26,7 @@ class HomePage extends StatelessWidget {
     },
     {
       "nome": "Casa com quintal e 3 quartos",
-      "preco": 2000000.00,
+      "preco": 2000000,
       "descricaoBreve" : "Localizada no vale do mutuca no condominio vila castela",
       "descricao": "\n•Casa moderna à venda, estilo e conforto em um só lugar.\n •Design contemporâneo com acabamento em madeira e  concreto.\n •Garagem coberta para até 3 carros. \n •Varanda espaçosa no andar superior. \n Jardim frontal com paisagismo e espaços amplos e bem iluminados. \n •Localizada em um bairro tranquilo e valorizado, próxima a comércios, escolas e vias de acesso. Perfeita para morar com conforto e estilo. \n Agende uma visita!",
       "imagem": 'img/casade2milha.jpg',
@@ -36,6 +37,8 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    //final formatador = NumberFormat.currency(locale: "pt_BR", symbol: "R\$");
+  //String valorFormatado = formatador.format(valor);
     return Scaffold(
       appBar: AppBar(title: const Text('Imóveis em Nova Lima - Minas Gerais')),
       body: ListView.builder(
@@ -59,7 +62,7 @@ class HomePage extends StatelessWidget {
               ),
               subtitle: Text(
                 'Local: ${casa['local']}\n'
-                'Preço: R\$ ${casa['preco'].toStringAsFixed(2)}\n'
+                'Preço: R\$ ${casa['preco']}\n'
                 'Descrição: ${casa['descricaoBreve']}',
               ),
               onTap: () {
